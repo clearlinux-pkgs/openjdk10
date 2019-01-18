@@ -1,0 +1,23 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+# freetype-dev
+# libXtst-dev
+# openjdk9
+# openjdk9-dev
+# libXt-dev
+# cups-dev
+# alsa-lib-dev
+alsa-lib-dev
+ca-certs
+ccache
+cups-dev
+freetype-dev
+libX11-dev
+libXext-dev
+libXi-dev
+libXrender-dev
+libXt-dev
+libXtst-dev
+openjdk9
+openjdk9-dev
+zip
