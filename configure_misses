@@ -1,0 +1,37 @@
+Configure miss: gdiff
+Configure miss: nawk
+Configure miss: cygpath
+Configure miss: greadlink
+Configure miss: pandoc
+Configure miss: if custom source is suppressed (openjdk-only)
+Configure miss: which variant of the JDK to build
+Configure miss: apt-get
+Configure miss: yum
+Configure miss: brew
+Configure miss: port
+Configure miss: pkgutil
+Configure miss: pkgadd
+Configure miss: output-sync value
+Configure miss: greadelf
+Configure miss: hg
+Configure miss: time
+Configure miss: dtrace
+Configure miss: gpatch
+Configure miss: headless only
+Configure miss: pandoc
+Configure miss: full docs
+Configure miss: gobjcopy
+Configure miss: gobjdump
+Configure miss: broken SuSE 'ld' which only understands anonymous version tags in executables
+Configure miss: jtreg
+Configure miss: jtreg test harness
+Configure miss: jib
+Configure miss: if native warnings are errors
+Configure miss: dtrace tool
+Configure miss: sys/sdt.h usability
+Configure miss: sys/sdt.h presence
+Configure miss: sys/sdt.h
+Configure miss: if dtrace should be built
+Configure miss: if we should bundle freetype
+Configure miss: if jtreg failure handler should be built
+Configure miss: whether to use sjavac

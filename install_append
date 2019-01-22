@@ -1,0 +1,57 @@
+rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/lib/jvm/java-1.10.0-openjdk
+cp -r build/linux-x86_64-normal-server-release/images/jdk/* %{buildroot}/usr/lib/jvm/java-1.10.0-openjdk
+
+# Remove the copied keystore and link it to the runtime store
+rm -f %{buildroot}/usr/lib/jvm/java-1.10.0-openjdk/lib/security/cacerts
+ln -s /var/cache/ca-certs/compat/ca-roots.keystore %{buildroot}/usr/lib/jvm/java-1.10.0-openjdk/lib/security/cacerts
+
+mkdir -p %{buildroot}/usr/lib64
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/lib/jli/libjli9.so %{buildroot}/usr/lib64/libjli10.so
+
+mkdir -p %{buildroot}/usr/bin
+# Basic binaries
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/java %{buildroot}/usr/bin/java10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jjs %{buildroot}/usr/bin/jjs10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/keytool %{buildroot}/usr/bin/keytool10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/orbd %{buildroot}/usr/bin/orbd10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/pack200 %{buildroot}/usr/bin/pack20010
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/policytool %{buildroot}/usr/bin/policytool10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/rmid %{buildroot}/usr/bin/rmid10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/rmiregistry %{buildroot}/usr/bin/rmiregistry10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/servertool %{buildroot}/usr/bin/servertool10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/tnameserv %{buildroot}/usr/bin/tnameserv10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/unpack200 %{buildroot}/usr/bin/unpack20010
+
+# Dev binaries
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/appletviewer %{buildroot}/usr/bin/appletviewer10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/idlj %{buildroot}/usr/bin/idlj10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jar %{buildroot}/usr/bin/jar10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jarsigner %{buildroot}/usr/bin/jarsigner10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/javac %{buildroot}/usr/bin/javac10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/javadoc %{buildroot}/usr/bin/javadoc10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/javah %{buildroot}/usr/bin/javah10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/javap %{buildroot}/usr/bin/javap10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jcmd %{buildroot}/usr/bin/jcmd10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jconsole %{buildroot}/usr/bin/jconsole10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jdb %{buildroot}/usr/bin/jdb10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jdeprscan %{buildroot}/usr/bin/jdeprscan10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jdeps %{buildroot}/usr/bin/jdeps10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jhsdb %{buildroot}/usr/bin/jhsdb10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jimage %{buildroot}/usr/bin/jimage10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jinfo %{buildroot}/usr/bin/jinfo10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jlink %{buildroot}/usr/bin/jlink10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jmap %{buildroot}/usr/bin/jmap10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jmod %{buildroot}/usr/bin/jmod10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jps %{buildroot}/usr/bin/jps10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jrunscript %{buildroot}/usr/bin/jrunscript10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jshell %{buildroot}/usr/bin/jshell10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jstack %{buildroot}/usr/bin/jstack10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jstat %{buildroot}/usr/bin/jstat10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/jstatd %{buildroot}/usr/bin/jstatd10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/rmic %{buildroot}/usr/bin/rmic10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/schemagen %{buildroot}/usr/bin/schemagen10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/serialver %{buildroot}/usr/bin/serialver10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/wsgen %{buildroot}/usr/bin/wsgen10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/wsimport %{buildroot}/usr/bin/wsimport10
+ln -s /usr/lib/jvm/java-1.10.0-openjdk/bin/xjc %{buildroot}/usr/bin/xjc10
