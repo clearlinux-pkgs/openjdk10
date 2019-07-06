@@ -4,7 +4,7 @@
 #
 Name     : openjdk10
 Version  : 10.0.2+13
-Release  : 1
+Release  : 2
 URL      : http://hg.openjdk.java.net/jdk-updates/jdk10u/archive/jdk-10.0.2+13.tar.bz2
 Source0  : http://hg.openjdk.java.net/jdk-updates/jdk10u/archive/jdk-10.0.2+13.tar.bz2
 Summary  : No detailed summary available
